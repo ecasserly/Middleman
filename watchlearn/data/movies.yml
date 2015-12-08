@@ -1,0 +1,10 @@
+movies:
+  - title: Inception
+    director: Christopher Nolan
+    actors: Leonardo DiCaprio, Joseph Gordon-Levitt, Ellen Page
+    poster: inception.jpg
+
+  - title: Dark Knight
+    director: Christopher Nolan
+    actors: Christian Bale, Heath Ledger, Aaron Eckhart
+    poster: darkknight.jpg

@@ -1,0 +1,59 @@
+---
+title: Hello World
+---
+
+<div class="container">
+	<h1>This is where the content goes.</h1>
+	<p><a href="/about">Click</a></p>
+	<br><br>
+
+	<h2>Check out my videos.</h2>
+	<br><br>
+
+	<% blog('videos').articles[0...5].each do |article| %>
+	
+		<a href="<%= article.url %>"><%= article.title %></a> - <%= article.data.videotime %>
+		<%= image_tag(article.data.image) %>
+		<p><%= article.data.introtext %></p>
+
+		<%= link_to("Read more", article.url) %>
+
+		<br>
+
+	<% end %>
+
+	<h2>Check out my articles.</h2>
+	<br><br>
+
+	<% blog('text').articles[0...5].each do |article| %>
+	
+		<a href="<%= article.url %>"><%= article.title %></a><br>
+
+	<% end %>
+
+	<br><br>
+
+	<div class="clearfix">
+		<h3>List of friends</h3><br>
+		<% data.people.friends.each do |friend| %>
+			<%= friend %><br>
+		<% end %>
+	</div>
+
+
+
+
+	<div class="clearfix">
+		<h3>List of movies</h3><br>
+		<% data.movies.movies.each do |movie| %>
+			<ul>
+				<li><strong>Title:</strong> <%= movie.title %></li>
+				<li><strong>Director:</strong> <%= movie.director %></li>
+				<li><strong>Actors:</strong> <%= movie.actors %></li>
+				<li><%= image_tag(movie.poster) %></li>
+				<br>
+			</ul>
+		<% end %>
+	</div>
+
+</div>

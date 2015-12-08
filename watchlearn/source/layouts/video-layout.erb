@@ -1,0 +1,15 @@
+<%= partial 'partials/head' %>
+<%= partial 'partials/header' %>
+
+	<%= current_page.title %>
+	
+	<div class="container">
+		<iframe width="960" height="720" src="//www.youtube.com/embed/<%= current_page.data.youtubecode %>?rel=0&vq=hd720&showinfo=0&autohide=1&thumbnail=default" frameborder="0" allowfullscreen></iframe>
+	</div>
+
+	<h3><%= current_page.data.introtext %></h3>
+
+    <%= yield %>
+
+ <%= partial 'partials/footer' %>
+ <%= partial 'partials/head' %>
